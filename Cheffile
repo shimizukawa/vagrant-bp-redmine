@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt'
+cookbook 'git'
+cookbook "mercurial"
+cookbook "mysql"
+
+# external
+
+#cookbook 'python-build',
+#  :git => 'https://github.com/shimizukawa/chef-python-build'
+#
+#cookbook 'download-make-install',
+#  :git => 'https://github.com/shimizukawa/chef-download-make-install'
+
+cookbook 'mercurial-env',
+  :git => 'https://github.com/shimizukawa/chef-mercurial-env'
+
+#cookbook 'shimizukawa-env',
+#  :git => 'https://github.com/shimizukawa/chef-shimizukawa-env'
+
+cookbook "rvm",
+  :git => 'https://github.com/fnichol/chef-rvm'
+
+cookbook "rvm-redmine",
+  :git => 'https://github.com/shimizukawa/chef-rvm-redmine'
+
+cookbook "bp-redmine",
+  :git => 'https://github.com/shimizukawa/chef-bp-redmine'
