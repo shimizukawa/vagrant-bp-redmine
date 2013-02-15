@@ -89,9 +89,9 @@ Vagrant::Config.run do |config|
       },
       :rvm_redmine => {
         :rvm_name => 'ruby-1.8.7-p371@redmine',
-        :user => 'www-data',
-        :group => 'www-data',
-        :user_home => '/var/www/www-data',
+        #:user => 'www-data',
+        #:group => 'www-data',
+        #:user_home => '/var/www/www-data',
         :db => {
           :type => "mysql",
           :user => "root",
