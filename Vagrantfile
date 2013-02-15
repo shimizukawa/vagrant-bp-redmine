@@ -66,7 +66,7 @@ Vagrant::Config.run do |config|
   # some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
-    chef.log_level = "debug"
+    #chef.log_level = "debug"
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "apt"
     chef.add_recipe "git"
@@ -76,6 +76,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "rvm::vagrant"
     chef.add_recipe "bp-redmine"
+    chef.add_recipe "bp-redmine::restructuredtext"
 
     chef.json.merge!({
       :mysql => {
