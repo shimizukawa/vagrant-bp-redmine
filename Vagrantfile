@@ -87,9 +87,16 @@ Vagrant::Config.run do |config|
       :rvm => {
         :default_ruby => 'ruby-1.8.7-p371',
         #:user_default_ruby => 'ruby-1.8.7-p371',
+        :gems => {
+          'ruby-1.8.7-p371@redmine' => [
+            {'name' => 'net-ldap'}, # TODO: page was not setup
+          ],
+        },
       },
       :rvm_redmine => {
         :rvm_name => 'ruby-1.8.7-p371@redmine',
+        :dl_id => '76718',
+        :name => 'redmine-1.4.7',
         #:user => 'www-data',
         #:group => 'www-data',
         #:user_home => '/var/www/www-data',
@@ -98,6 +105,9 @@ Vagrant::Config.run do |config|
           :user => "root",
           :password => 'mysql',
         },
+        :plugins => [
+          #"git://github.com/suer/redmine_export_with_journals.git",
+        ],
         :unicorn_port => '10080',
         :hostname => 'localhost',
         :hostname_aliases => ['127.0.0.1'],
