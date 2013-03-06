@@ -99,7 +99,7 @@ Vagrant::Config.run do |config|
         :name => 'redmine-1.4.7',
         #:user => 'www-data',
         #:group => 'www-data',
-        #:user_home => '/var/www/www-data',
+        :install_prefix => '/var/www/vhosts',
         :db => {
           :type => "mysql",
           :user => "root",
