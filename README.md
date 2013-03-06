@@ -13,7 +13,7 @@ QUICK procedure
 
 1. install `virtualbox` by installer.
 2. install `vagrant` by installer.
-3. `vagrant box add ubuntu-12.04-x64 http://files.vagrantup.com/precise64.box
+3. `vagrant box add ubuntu-12.04-x64 http://files.vagrantup.com/precise64.box`
 
 ### up environment
 
@@ -39,7 +39,7 @@ Recipe Development proceduer
 
 1. install `virtualbox` by installer.
 2. install `vagrant` by installer.
-3. `vagrant box add ubuntu-12.04-x86_64 http://dl.dropbox.com/u/1537815/precise64.box`
+3. `vagrant box add ubuntu-12.04-x64 http://files.vagrantup.com/precise64.box`
 4. install `ruby` and `gem`
 5. `gem install librarian`
 
