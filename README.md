@@ -4,6 +4,8 @@ BePROUD redmine environment by using Vagrant+Chef
 QUICK procedure
 ----------------
 
+This procedure not support upgrade path, but easy.
+
 ### requirement
 
 1. vagrant
@@ -17,11 +19,12 @@ QUICK procedure
 
 ### up environment
 
-1. `wget http://github.com/shimizukawa/vagrant-chef-bpredmine.tgz` **[TODO] make location on github**
-2. `tgz zxf vagrant-chef-bpredmine.tgz`
-3. `cd vagrant-chef-bpredmine`  **[TODO] Vagrantfile referer cookbook to http://anywhere/**
+1. `wget https://github.com/shimizukawa/vagrant-bp-redmine/archive/master.zip`
+2. `tar zxf vagrant-bp-redmine-master.zip`
+3. `cd vagrant-bp-redmine-master`
+4. `wget https://bitbucket.org/shimizukawa/stuffs/downloads/chef-coookbook-bpredmine-20130312.tgz`
+2. `tar zxf chef-cookbook-bpredmine-20130312.tgz`
 4. `vagrant up`
-
 
 
 Recipe Development proceduer
@@ -45,8 +48,14 @@ Recipe Development proceduer
 
 ### up environment
 
-1. `git clone https://github.com/shimizukawa/vagrant-chef-bpredmine.git` **[TODO] make location on github**
-2. `cd vagrant-chef-bpredmine`
+1. `git clone https://github.com/shimizukawa/vagrant-bp-redmine.git`
+2. `cd vagrant-bp-bpredmine`
 3. `librarian-chef install`
 4. `vagrant up`
+
+### upgrade environment
+
+1. `cd vagrant-bp-redmine`
+2. `librarian-chef update`
+3. `vagrant provision`
 
