@@ -1,6 +1,12 @@
 BePROUD redmine environment by using Vagrant+Chef
 ==================================================
 
+This document provides 2 procedure.
+
+* QUICK procedure  : quick and easy, but annoy to upgrade.
+* Development proceduer : many dependency, but easy upgrade.
+
+
 QUICK procedure
 ----------------
 
@@ -27,8 +33,8 @@ This procedure not support upgrade path, but easy.
 4. `vagrant up`
 
 
-Recipe Development proceduer
------------------------------
+Development procedure
+-----------------------
 
 ### requirement
 
