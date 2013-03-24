@@ -1,0 +1,26 @@
+{
+	"name": "db",
+	"default_attributes": {
+		"mysql": {
+			"tunable": {
+				"innodb_buffer_pool_size": "128M",
+				"innodb_log_file_size": "5M",
+				"innodb_log_buffer_size": "8M"
+			},
+			"bind_address": "0.0.0.0",
+			"server_root_password": "mysql",
+			"server_repl_password": "mysql",
+			"server_debian_password": "mysql",
+			"allow_remote_root": true
+		}
+	},
+	"override_attributes": {},
+	"json_class": "Chef::Role",
+	"description": "",
+	"chef_type": "role",
+	"run_list": [
+		"recipe[openssl]",
+		"recipe[mysql]",
+		"recipe[mysql::server]"
+	]
+}
