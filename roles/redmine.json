@@ -2,10 +2,12 @@
 	"name": "redmine",
 	"default_attributes": {
 		"rvm": {
-			"default_ruby": "ruby-1.8.7-p371",
+			"rubies": ["ruby-1.8.7-p371"],
+			"default_ruby": "ruby-1.8.7-p371@redmine",
+			"gem_package": {"rvm_string": "ruby-1.8.7-p371@redmine"},
 			"gems": {
 				"ruby-1.8.7-p371@redmine": [
-				{"name": "net-ldap"}  // TODO: net-ldap for redmine auth but not prepare redmine settings yet.
+					{"name": "net-ldap"}  // TODO: net-ldap for redmine auth but not prepare redmine settings yet.
 				]
 			}
 		},
@@ -23,9 +25,11 @@
 			"plugins": [
 				//"git://github.com/suer/redmine_export_with_journals.git"
 				],
-			"unicorn_port": "10080",
 			"hostname": "192.168.30.10",
-			"hostname_aliases": ["127.0.0.1", "192.168.30.10"]
+			"hostname_aliases": ["127.0.0.1", "192.168.30.10"],
+			"unicorn": {
+				"copy_on_write": true
+			}
 		}
 	},
 	"override_attributes": {},
