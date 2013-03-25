@@ -40,6 +40,7 @@
 		"recipe[rvm::vagrant]",
 		"recipe[bp-redmine]",
 		"recipe[bp-redmine::restructuredtext]",
+		"recipe[bp-redmine::redmine_scm]",
 		"recipe[bp-redmine::cron]"
 	]
 }
