@@ -39,6 +39,7 @@
 	"run_list": [
 		"recipe[rvm::vagrant]",
 		"recipe[bp-redmine]",
-		"recipe[bp-redmine::restructuredtext]"
+		"recipe[bp-redmine::restructuredtext]",
+		"recipe[bp-redmine::lockrun]"
 	]
 }
