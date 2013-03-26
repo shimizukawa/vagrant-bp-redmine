@@ -9,17 +9,11 @@ cookbook "mysql"
 
 # external
 
-#cookbook 'python-build',
-#  :git => 'https://github.com/shimizukawa/chef-python-build'
-#
-#cookbook 'download-make-install',
-#  :git => 'https://github.com/shimizukawa/chef-download-make-install'
+cookbook 'unicorn',
+  :git => 'https://github.com/opscode-cookbooks/unicorn'
 
 cookbook 'mercurial-env',
   :git => 'https://github.com/shimizukawa/chef-mercurial-env'
-
-#cookbook 'shimizukawa-env',
-#  :git => 'https://github.com/shimizukawa/chef-shimizukawa-env'
 
 cookbook "rvm",
   :git => 'https://github.com/fnichol/chef-rvm'
