@@ -2,17 +2,17 @@
 	"name": "redmine",
 	"default_attributes": {
 		"rvm": {
-			"rubies": ["ruby-1.8.7-p371"],
-			"default_ruby": "ruby-1.8.7-p371@redmine",
-			"gem_package": {"rvm_string": "ruby-1.8.7-p371@redmine"},
+			"rubies": ["1.8.7"],
+			"default_ruby": "1.8.7@redmine",
+			"gem_package": {"rvm_string": "1.8.7@redmine"},
 			"gems": {
-				"ruby-1.8.7-p371@redmine": [
+				"1.8.7@redmine": [
 					{"name": "net-ldap"}  // TODO: net-ldap for redmine auth but not prepare redmine settings yet.
 				]
 			}
 		},
 		"rvm_redmine": {
-			"rvm_name": "ruby-1.8.7-p371@redmine",
+			"rvm_name": "1.8.7@redmine",
 			"dl_id": "76718",
 			"name": "redmine-1.4.7",
 			"install_prefix": "/var/www/vhosts",
