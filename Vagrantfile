@@ -19,7 +19,10 @@ Vagrant::Config.run do |config|
     chef.add_role "redmine"
 
     chef.json.merge!({
-      "rvm_redmine" => {"db" => {"hostname" => '192.168.30.10'}}
+      "rvm_redmine" => {
+        "db" => {"hostname" => '192.168.30.10'},
+        "url_subpath": "/",
+      }
     })
   end
 
