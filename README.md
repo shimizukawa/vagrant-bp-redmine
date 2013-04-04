@@ -36,7 +36,7 @@ Setup procedure
 1. vagrant
 2. virtualbox
 3. ruby/gem
-4. librarian
+4. librarian-chef
 6. git
 
 #### preparation
@@ -45,7 +45,7 @@ Setup procedure
 2. install `vagrant` by installer.
 3. `vagrant box add ubuntu-12.04-x64 http://files.vagrantup.com/precise64.box`
 4. install `ruby` and `gem`
-5. `gem install librarian`
+5. `gem install librarian-chef`
 
 #### up environment
 
