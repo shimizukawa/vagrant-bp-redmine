@@ -25,37 +25,44 @@ you can use redmine's default administrator account `admin` / `admin`.
 If you want to change your virtual machines' IP address and redmine path,
 these parameters are specified in `Vagrantfile` or `Vagrantfile.multi`.
 
+requirement
+------------
 
-Setup procedure
--------------------
+1. virtualbox 4.2.16 or later
+2. vagrant 1.3.4 or later (1.3.3 is broken)
+3. gcc (command line tools for Xcode)
+4. some vagrant plugins: vagrant-berkshelf, vagrant-omnibus
 
-### Normal procedure
 
-#### requirement
-
-1. vagrant
-2. virtualbox
-3. ruby/gem
-4. librarian-chef
-6. git
-
-#### preparation
+preparation
+------------
 
 1. install `virtualbox` by installer.
 2. install `vagrant` by installer.
-3. `vagrant box add ubuntu-12.04-x64 http://files.vagrantup.com/precise64.box`
-4. install `ruby` and `gem`
-5. `gem install librarian-chef`
+3. install gcc by "command line tools for Xcode" installer.
+4. install some plugins for vagrant
 
-#### up environment
+
+### plugin: vagrant-berkshelf
+
+vagrant chef provisioning support tool, vagrant-berkshelf::
+
+   $ vagrant plugin install vagrant-berkshelf
+
+This installation requires `Command line tools for XCode`.
+
+
+### plugin: vagrant-omnibus
+
+If chef version provided in Vagrantfile, `vagrant-omnibus` plugin will update your chef version in the VM box::
+
+   $ vagrant plugin install vagrant-omnibus
+
+
+up environment
+---------------
 
 1. `git clone https://github.com/shimizukawa/vagrant-bp-redmine.git`
 2. `cd vagrant-bp-bpredmine`
-3. `librarian-chef install`
-4. `vagrant up`
+3. `vagrant up`
 
-#### upgrade environment
-
-1. `cd vagrant-bp-redmine`
-2. `librarian-chef update`
-3. `vagrant provision`
