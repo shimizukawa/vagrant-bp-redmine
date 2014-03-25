@@ -31,6 +31,7 @@ Vagrant.configure("2") do |config|
         }
       })
     end
+
   elsif ENV['VAGRANT_BOOT'] == 'multi'
     config.vm.define :db do |cfg|
       cfg.vm.network :hostonly, "192.168.30.11"
@@ -63,7 +64,7 @@ Vagrant.configure("2") do |config|
         chef.json.merge!({
           "rvm_redmine" => {
             "db" => {"hostname" => '192.168.30.11'},
-            "url_subpath": "/",
+            "url_subpath" => "/",
           }
         })
       end
